@@ -1,9 +1,22 @@
 package com.company;
 
+import java.util.Objects;
+
 public class Software extends Product {
     private String programmer;
     private String platform; // linux, mac, or pc
     private String os;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Software software = (Software) o;
+        return Objects.equals(programmer, software.programmer) &&
+                Objects.equals(platform, software.platform) &&
+                Objects.equals(os, software.os);
+    }
 
     @Override
     public String toString(){
