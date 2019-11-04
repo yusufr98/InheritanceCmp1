@@ -7,11 +7,11 @@ public class Product {
     private String code;
     private String description;
     private double price;
-
-    public Product() {
-        code = "";
-        description = "";
-        price = 0.0;
+    public Product() {};
+    public Product(String c, String d, double p) {
+        code = c;
+        description = d;
+        price = p;
     }
 
     // Get and set accessors for the code, description, and price instance variables
